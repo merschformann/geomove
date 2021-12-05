@@ -20,6 +20,7 @@ setuptools.setup(
     license=license,
     author="Marius Merschformann",
     author_email="marius.merschformann@gmail.com",
+    url="https://github.com/merschformann/geomove",
     packages=setuptools.find_packages(),
     install_requires=install_requires,
 )
