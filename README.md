@@ -1,6 +1,8 @@
 # geomove
 
-Moves points on earth towards a given bearing by a given distance.
+[![pypi_version](https://img.shields.io/pypi/v/geomove?label=pypi)](https://pypi.org/project/geomove)[![build](https://github.com/merschformann/geomove/actions/workflows/build.yml/badge.svg)](https://github.com/merschformann/geomove/actions/workflows/build.yml)
+
+Moves points on earth's surface towards a given bearing by a given distance.
 
 ## Installation
 

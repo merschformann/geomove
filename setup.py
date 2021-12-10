@@ -1,26 +1,31 @@
+from os import path
 import setuptools
 
-with open("requirements.txt") as fp:
+# Collect additional information from separate files
+dir = path.abspath(path.dirname(__file__))
+with open(path.join(dir, "requirements.txt"), encoding="utf-8") as fp:
     install_requires = fp.read()
-
-with open("version.txt") as fp:
+with open(path.join(dir, "version.txt"), encoding="utf-8") as fp:
     version = fp.readline().strip()
-
-with open("README.md") as fp:
+with open(path.join(dir, "README.md"), encoding="utf-8") as fp:
     readme = fp.read()
 
-with open("LICENSE") as f:
-    license = f.read()
-
+# Actual setup
 setuptools.setup(
     name="geomove",
-    description="Moves points on earth towards a given bearing by a given distance.",
+    description="Moves points on earth's surface towards a given bearing by a given distance.",
     long_description=readme,
+    long_description_content_type="text/markdown",
     version=version,
-    license=license,
     author="Marius Merschformann",
     author_email="marius.merschformann@gmail.com",
     url="https://github.com/merschformann/geomove",
-    packages=setuptools.find_packages(),
+    packages=["geomove"],
     install_requires=install_requires,
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Topic :: Scientific/Engineering :: GIS",
+    ],
 )
