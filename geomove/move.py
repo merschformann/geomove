@@ -13,13 +13,13 @@ class Bearing(enum.Enum):
     """
 
     NORTH = 0.0
-    NORTHEAST = 45.0
+    NORTH_EAST = 45.0
     EAST = 90.0
-    SOUTHEAST = 135.0
+    SOUTH_EAST = 135.0
     SOUTH = 180.0
-    SOUTHWEST = 225.0
+    SOUTH_WEST = 225.0
     WEST = 270.0
-    NORTHWEST = 315.0
+    NORTH_WEST = 315.0
 
 
 def move(
@@ -39,6 +39,7 @@ def move(
 
     # Convert to radians
     lat, lon = math.radians(point[0]), math.radians(point[1])
+    bearing = math.radians(bearing)
 
     # Calculate moved lat and lon
     lat_prime = math.asin(
