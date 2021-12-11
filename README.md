@@ -18,7 +18,7 @@ pip install geomove
 
 ## Usage
 
-Move a point (lat, lon) west by 10 km:
+Move a `(lat, lon)` point west by 10 km:
 
 ```python
 from geomove import move, Bearing
