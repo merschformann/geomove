@@ -1,2 +1,3 @@
 # geomove
-Small library for moving geolocations towards a bearing.
+
+This branch hosts Github pages for `geomove`. The URL is `https://merschformann.github.io/geomove/...`.
