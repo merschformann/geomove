@@ -10,6 +10,8 @@ These points were created by moving a reference point (R) by 10 km in all base d
 
 ![compass_rose](material/compass_rose.png)
 
+Find the plot [here](https://merschformann.github.io/geomove/material/compass.html).
+
 ## Installation
 
 ```bash
