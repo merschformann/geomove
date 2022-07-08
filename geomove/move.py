@@ -56,15 +56,12 @@ def move(
     lat_prime = math.degrees(lat_prime)
     lon_prime = math.degrees(lon_prime)
 
-    # Normalize latitude
-    lat_prime += 90.0
-    lat_prime %= 180.0
-    lat_prime -= 90.0
-
-    # Normalize longitude
-    lon_prime += 180.0
-    lon_prime %= 360.0
-    lon_prime -= 180.0
+    # Normalize latitude and longitude
+    lat_prime = (lat_prime + 90) % 360 - 90
+    if lat_prime > 90:
+        lat_prime = 180 - lat_prime
+        lon_prime += 180
+    lon_prime = (lon_prime + 180) % 360 - 180
 
     return lat_prime, lon_prime
 
