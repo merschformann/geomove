@@ -1,0 +1,8 @@
+geomove/
+sandbox/
+tests/
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+__pycache__/
